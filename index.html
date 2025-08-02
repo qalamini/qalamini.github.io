@@ -1,159 +1,167 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Qalamini - Game Hijaiyah</title>
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --dark-green: #2F5249;
-      --green: #437057;
-      --light-green: #97B067;
-      --yellow: #E3DE61;
-      --white: #fefefe;
-      --bg: #f8f9f7;
-    }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Qalamini - Game Hijaiyah</title>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+        <style>
+            :root {
+                --dark-green: #2F5249;
+                --green: #437057;
+                --light-green: #97B067;
+                --yellow: #E3DE61;
+                --white: #fefefe;
+                --bg: #f8f9f7;
+            }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
 
-    body {
-      font-family: 'Comic Neue', sans-serif;
-      background-color: var(--bg);
-      color: var(--dark-green);
-      line-height: 1.6;
-    }
+            body {
+                font-family: 'Comic Neue', sans-serif;
+                background-color: var(--bg);
+                color: var(--dark-green);
+                line-height: 1.6;
+            }
 
-    header {
-      background: linear-gradient(45deg, var(--green), var(--light-green));
-      padding: 2rem 1rem;
-      text-align: center;
-      color: white;
-    }
+            header {
+                background: linear-gradient(45deg, var(--green), var(--light-green));
+                padding: 2rem 1rem;
+                text-align: center;
+                color: white;
+            }
 
-    header img.logo {
-      width: 250px;
-      max-width: 90%;
-      height: auto;
-      margin-bottom: 0.5rem;
-    }
+            header img.logo {
+                width: 250px;
+                max-width: 90%;
+                height: auto;
+                margin-bottom: 0.5rem;
+            }
 
-    header p {
-      font-size: 1.2rem;
-    }
+            header p {
+                font-size: 1.2rem;
+            }
 
-    section {
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: auto;
-    }
+            section {
+                padding: 2rem 1rem;
+                max-width: 900px;
+                margin: auto;
+            }
 
-    .cta {
-      background-color: var(--yellow);
-      padding: 1.5rem;
-      border-radius: 10px;
-      text-align: center;
-      margin: 2rem 0;
-      font-weight: bold;
-    }
+            .cta {
+                background-color: var(--yellow);
+                padding: 1.5rem;
+                border-radius: 10px;
+                text-align: center;
+                margin: 2rem 0;
+                font-weight: bold;
+            }
 
-    .mockup-center {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
+            .mockup-center {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
 
-    .mockup-center img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
+            .mockup-center img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 16px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            }
 
-    .download-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
+            .download-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
 
-    .download-buttons a {
-      background-color: var(--green);
-      color: white;
-      padding: 1rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      text-align: center;
-      transition: background-color 0.3s ease;
-    }
+            .download-buttons a {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                background-color: var(--green);
+                color: white;
+                padding: 1rem 1rem 1rem 2rem;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: bold;
+                text-align: left;
+                transition: background-color 0.3s ease;
+            }
 
-    .download-buttons a:hover {
-      background-color: var(--dark-green);
-    }
+            .download-buttons a i {
+                font-size: 1.2rem;
+            }
 
-    footer {
-      background-color: var(--dark-green);
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
+            .download-buttons a:hover {
+                background-color: var(--dark-green);
+            }
 
-    @media (min-width: 600px) {
-      .download-buttons {
-        flex-direction: row;
-        justify-content: center;
-      }
+            footer {
+                background-color: var(--dark-green);
+                color: white;
+                text-align: center;
+                padding: 1rem;
+                margin-top: 2rem;
+            }
 
-      .download-buttons a {
-        flex: 1;
-        max-width: 250px;
-      }
-    }
-  </style>
-</head>
-<body>
+            @media (min-width: 600px) {
+                .download-buttons {
+                    flex-direction: row;
+                    justify-content: center;
+                }
 
-  <header>
-    <img src="title-qalamini.png" alt="Qalamini Logo" class="logo" />
-    <p>Dengan Pena, Makin Dekat Dengan AlQuran</p>
-  </header>
+                .download-buttons a {
+                    flex: 1;
+                    max-width: 250px;
+                }
+            }
+        </style>
+    </head>
+    <body>
 
-  <section>
-    <h2>Tentang Aplikasi</h2>
-    <p>
-      Qalamini adalah aplikasi game edukasi yang dirancang untuk membantu anak-anak belajar menulis huruf hijaiyah dengan cara yang menyenangkan.
-      Fitur utamanya adalah <strong>writing detection</strong>, yang memungkinkan sistem mengoreksi apakah tulisan anak sesuai dengan huruf yang muncul di layar.
-      Jika benar, anak mendapat poin. Jika salah, nyawanya berkurang.
-    </p>
-    <p>
-      Permainan terdiri dari beberapa level: mudah, sedang, dan sulit. Pada level mudah, anak-anak belajar menulis huruf hijaiyah satu per satu tanpa harokat,
-      sambil mengenal nama dan bentuk huruf tersebut.
-    </p>
+        <header>
+            <img src="title-qalamini.png" alt="Qalamini Logo" class="logo" />
+            <p>Dengan Pena, Makin Dekat Dengan AlQuran</p>
+        </header>
 
-    <div class="cta">
-      Mari kita bantu anak-anak belajar AlQuran dengan cara yang menyenangkan.<br>
-      Dengan Qalamini, belajar menulis huruf hijaiyah menjadi lebih interaktif, penuh tantangan, dan bermakna.
-    </div>
+        <section>
+            <h2>Tentang Aplikasi</h2>
+            <p>
+                Qalamini adalah aplikasi game edukasi yang dirancang untuk membantu anak-anak belajar menulis huruf hijaiyah dengan cara yang menyenangkan. 
+                Fitur utama dari aplikasi ini adalah <strong>real-time writing detection</strong>, yang memungkinkan sistem mengoreksi apakah tulisan anak sesuai dengan huruf yang muncul di layar atau tidak. 
+                Jika benar ia akan mendapatkan poin, jika salah ia harus mengulangi tulisannya lagi, dan jika belum benar sampai huruf menyentuh batas maka nyawanya akan berkurang. 
+            </p>
 
-    <div class="mockup-center">
-      <img src="mockup-ipad.png" alt="Mockup Tampilan Qalamini di iPad" />
-    </div>
+            <div class="cta">
+                Mari kita bantu anak-anak belajar AlQuran dengan cara yang menyenangkan.<br>
+                Dengan Qalamini, belajar menulis huruf hijaiyah menjadi lebih interaktif, penuh tantangan, dan bermakna.
+            </div>
 
-    <h2>Unduh Sekarang</h2>
-    <div class="download-buttons">
-      <a href="https://github.com/qalamini/Qalamini/releases/download/Android/QalaminiAndroid-V0.2.apk" target="_blank">Unduh untuk Android</a>
-      <a href="https://testflight.apple.com/join/4rsDJv6F" target="_blank">Tes di iOS / iPadOS (TestFlight)</a>
-    </div>
-  </section>
+            <div class="mockup-center">
+                <img src="mockup-ipad.png" alt="Mockup Tampilan Qalamini di iPad" />
+            </div>
 
-  <footer>
-    &copy; 2025 Qalamini. All rights reserved.
-  </footer>
+            <h2>Unduh Sekarang</h2>
+            <div class="download-buttons">
+                <a href="https://github.com/qalamini/Qalamini/releases/download/Android/QalaminiAndroid-V0.2.apk" target="_blank">
+                    <i class="bi bi-download"></i> Mobile / Tablet Android (File APK)
+                </a>
+                <a href="https://testflight.apple.com/join/4rsDJv6F" target="_blank">
+                    <i class="bi bi-download"></i> iPhone / iPad (TestFlight)
+                </a>
+            </div>
+        </section>
 
-</body>
+        <footer>
+            &copy; 2025 Qalamini. All rights reserved.
+        </footer>
+
+    </body>
 </html>
